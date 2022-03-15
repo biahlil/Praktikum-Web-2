@@ -3,10 +3,7 @@
     <title>
         Daftar Smartphone Samsung
     </title>
-    <?php
-        $smartphone = array("S22"=>"Samsung Galaxy S22","S22+"=>"Samsung Galaxy S22+","A03"=>"Samsung Galaxy A03","Xc5"=>"Samsung Galaxy Xcover 5");    
-    ?>
-
+    <?php $smartphone = array("S22"=>"Samsung Galaxy S22","S22+"=>"Samsung Galaxy S22+","A03"=>"Samsung Galaxy A03","Xc5"=>"Samsung Galaxy Xcover 5"); ?>
     <style>
         table,th,td {
             border: 1px solid;

@@ -1,12 +1,7 @@
 <html>
 <head>
-    <title>
-        Daftar Smartphone Samsung
-    </title>
-    <?php
-        $smartphone = array("Samsung Galaxy S22","Samsung Galaxy S22+","Samsung Galaxy A03","Samsung Galaxy Xcover 5");    
-    ?>
-
+    <title>Daftar Smartphone Samsung</title>
+    <?php $smartphone = array("Samsung Galaxy S22","Samsung Galaxy S22+","Samsung Galaxy A03","Samsung Galaxy Xcover 5");  ?>
     <style>
         table,th,td {
             border: 1px solid;
@@ -42,5 +37,4 @@
         </tr>
     </table>
 </body>
-
 </html>
