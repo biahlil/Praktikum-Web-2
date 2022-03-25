@@ -29,12 +29,29 @@
                         $counter = 100;    
                     }
                 }
-                sort($nama, SORT_STRING);
-                $jmlNama = count($nama);
-                for ($counter = 0;$counter < $jmlNama; $counter++) { 
-                    echo $nama[$counter];
-                    echo "<br>";
-                }
+                if($nama[0] < $nama[1] && $nama[1] < $nama[2]){
+					echo "$nama[0] <br> $nama[1] <br> $nama[2]";
+				}
+				else if($nama[0] < $nama[1] && $nama[1] > $nama[2] && $nama[0] < $nama[2]){
+					echo "$$nama[0] <br> $nama[2] <br> $nama[1]";
+				}
+				else if($nama[0] > $nama[1] && $nama[1] < $nama[2] && $nama[0] < $nama[2]){
+					echo "$nama[1] <br> $nama[0] <br> $nama[2]";
+				}
+				else if($nama[0] > $nama[1] && $nama[1] < $nama[2] && $nama[0] > $nama[2]){
+					echo "$nama[1] <br> $nama[2] <br> $nama[0]";
+				}
+				else if($nama[0] < $nama[1] && $nama[1] > $nama[2] && $nama[0] > $nama[2]){
+					echo "$nama[2] <br> $nama[0] <br> $nama[1]";
+				}
+				else {
+					echo "$nama[2] <br> $nama[1] <br> $nama[0]";
+				}
+                // $jmlNama = count($nama);
+                // for ($counter = 0;$counter < $jmlNama; $counter++) { 
+                //     echo $nama[$counter];
+                //     echo "<br>";
+                // }
             }
             ?>
         </div>
