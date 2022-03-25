@@ -42,17 +42,17 @@
                         $suhu = $ke / 5 * ($nilai - 273) + 32;
                         echo "<h1>Hasil Konversi : ".$suhu."°F</h1>";
                     }
+                    elseif ($dari == 9 && $ke == "Kelvin") {
+                        $suhu = 5 / $dari * ($nilai - 32) + 273;
+                        echo "<h1>Hasil Konversi : ".$suhu."°K</h1>";
+                    }
                     elseif ($ke == "Kelvin") {
                         $suhu = 5 / $dari * $nilai + 273;
                         echo "<h1>Hasil Konversi : ".$suhu."°K</h1>";
                     }
-                    if ($ke == 9 && $dari == 9) {
+                    elseif ($ke == 9 && $dari == 9) {
                         $suhu = $nilai;
                         echo "<h1>Hasil Konversi : ".$suhu."°F</h1>";
-                    }
-                    elseif ($dari == 9 && $ke == "Kelvin") {
-                        $suhu = $ke / $dari * ($nilai - 32) + 273;
-                        echo "<h1>Hasil Konversi : ".$suhu."°K</h1>";
                     }
                     elseif ($ke == 9) {
                         $suhu = $ke / $dari * $nilai + 32;

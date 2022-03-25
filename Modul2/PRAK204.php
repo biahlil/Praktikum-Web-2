@@ -20,8 +20,11 @@
                         elseif ($strBil == 1) {
                             echo "<h1>Hasil: Satuan</h1>";
                         }
-                        elseif ($strBil == 2) {
+                        elseif ($bilangan >= 10 && $bilangan <= 20) {
                             echo "<h1>Hasil: Belasan</h1>";
+                        }
+                        elseif ($strBil == 2) {
+                            echo "<h1>Hasil: Puluhan</h1>";
                         }
                         elseif ($strBil == 3) {
                             echo "<h1>Hasil: Ratusan</h1>";

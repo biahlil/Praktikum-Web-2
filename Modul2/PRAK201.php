@@ -3,9 +3,6 @@
         <title>
             Pengurut Nama
         </title>
-        <?php
-
-        ?>
     </head>
     <body>
         <div>
@@ -33,7 +30,7 @@
 					echo "$nama[0] <br> $nama[1] <br> $nama[2]";
 				}
 				else if($nama[0] < $nama[1] && $nama[1] > $nama[2] && $nama[0] < $nama[2]){
-					echo "$$nama[0] <br> $nama[2] <br> $nama[1]";
+					echo "$nama[0] <br> $nama[2] <br> $nama[1]";
 				}
 				else if($nama[0] > $nama[1] && $nama[1] < $nama[2] && $nama[0] < $nama[2]){
 					echo "$nama[1] <br> $nama[0] <br> $nama[2]";
@@ -47,6 +44,7 @@
 				else {
 					echo "$nama[2] <br> $nama[1] <br> $nama[0]";
 				}
+                // sort($nama,SORT_STRING);
                 // $jmlNama = count($nama);
                 // for ($counter = 0;$counter < $jmlNama; $counter++) { 
                 //     echo $nama[$counter];
