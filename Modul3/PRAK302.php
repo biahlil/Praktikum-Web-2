@@ -2,7 +2,6 @@
     <head>
         <style>
             tr {
-                text-align: right;
                 width: fit-content;
             }
             td {
