@@ -1,8 +1,5 @@
 <html>
     <head>
-        <style>
-            
-        </style>
         <?php 
             if ($_SERVER['REQUEST_METHOD']=='POST') {
                 $kalimat = $_POST["kalimat"];
