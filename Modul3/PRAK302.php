@@ -30,10 +30,10 @@
                 if ($_SERVER['REQUEST_METHOD']=='POST') {
                     $counter1 = 0;
                     echo "<table>";
-                    while ($counter1 <= $tinggi) {
+                    while ($counter1 < $tinggi) {
                         echo "<tr><td>";
                         $counter2 = 0;
-                        while ($counter2 <= $tinggi) {
+                        while ($counter2 < $tinggi) {
                             echo "<img src='$alamat'>";
                             $counter2++;
                         }

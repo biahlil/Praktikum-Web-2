@@ -32,7 +32,7 @@
                                     $counter3++;
                                 }
                                 else {
-                                    echo ($array["$counter2"]);
+                                    echo $array["$counter2"];
                                     $counter3++;
                                 }
                             }

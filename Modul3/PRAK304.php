@@ -15,6 +15,10 @@
     <body>
         <div>
             <?php
+                // Jika bintang nya minus kembali ke form
+                if ($star < 1) {
+                    $_SERVER['REQUEST_METHOD'] = null;
+                }
                 if ($_SERVER['REQUEST_METHOD']=='POST') {
                     if (isset($_POST['tambah'])) {
                         $star++;
@@ -23,6 +27,7 @@
                         $star--;
                     }
                     $counter = 0;
+                    
                     echo "<form method='POST'><input type='hidden' name='bintang' value='$star'>";                    
                     echo "Jumlah bintang $star";
                     echo "<br><table><tr><td>";
@@ -40,8 +45,6 @@
                 }
             ?>
         </div>
-        
-        
     </body>
 </html>
 
