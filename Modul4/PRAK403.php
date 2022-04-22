@@ -108,7 +108,6 @@
                 $counter2 = 0;
                 $counter3 = 1;
                 echo "<tr>";
-                // $countSmall = count($array[$counter2]['Mata Kuliah diambil']);
                 while ($counter2 < $countSmall) {
                     while ($counter3 <= 6) {            
                         if ($counter3 == 1) {
@@ -131,6 +130,7 @@
                         }
                         $counter3++;
                         $counterArr++;
+                        //
                     }
                     $counter2++;
                 }
