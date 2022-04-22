@@ -41,6 +41,8 @@
                         $tinggi--;
                     }
                     echo "</table>";
+                    print_r($_POST);
+                    // echo $_POST['link'][8];
                 }
                 
             ?>

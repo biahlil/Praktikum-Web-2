@@ -10,22 +10,25 @@
                 border: 2px black solid;
             }
         </style>
+        <?php 
+            if ($_SERVER['REQUEST_METHOD']=='POST') {
+                $nilaiRaw = $_POST["nilai"];
+                $baris = $_POST["panjang"];
+                $kolom = $_POST["lebar"];
+            }
+        ?>
     </head>
     <body>
         <form method="POST">
-            Panjang : <input type="number" name="panjang"><br>
-            Lebar : <input type="number" name="lebar"><br>
-            Nilai : <input type="text" name="nilai"><br>
+            Panjang : <input type="number" name="panjang" value="<?php if (isset($baris)) { echo"$baris"; } ?>"><br>
+            Lebar : <input type="number" name="lebar" value="<?php if (isset($kolom)) { echo"$kolom"; } ?>"><br>
+            Nilai : <input type="text" name="nilai" value="<?php if (isset($nilaiRaw)) { echo"$nilaiRaw"; } ?>"><br>
             <input type="submit" name="submit" value="Cetak">
         </form>
         <?php 
             if ($_SERVER['REQUEST_METHOD']=='POST') {
-                $nilaiRaw = $_POST["nilai"];
                 $nilaiTmp = explode(" ", $nilaiRaw);
                 $count = count($nilaiTmp);
-                // print_r($_POST);
-                $baris = $_POST["panjang"];
-                $kolom = $_POST["lebar"];
                 echo "<br> <table>";
                 if (empty($baris) == false) {
                     if (empty($kolom) == false) {

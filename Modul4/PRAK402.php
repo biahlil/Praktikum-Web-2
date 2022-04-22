@@ -23,7 +23,6 @@
                 ["Nama" => "Tono", "Nim" => "2101003", "NilaiUTS" => "50", "NilaiUAS" => "41"],
                 ["Nama" => "Jessica", "Nim" => "2101004", "NilaiUTS" => "60", "NilaiUAS" => "76"]
             ];
-            
             $nilaiakhir;
             $huruf;
             $counter1 = 0;
@@ -63,7 +62,6 @@
                 }
                 $counter1++;
             }
-            
             echo "<table>";
             echo "<tr class='header'>
             <td>Nama</td>
@@ -80,7 +78,6 @@
                 }
                 echo "</tr>";
             }
-
         ?>
     </body>
 </html>

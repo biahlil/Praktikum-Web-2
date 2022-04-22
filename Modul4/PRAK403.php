@@ -24,26 +24,22 @@
     </head>
     <body>
         <?php 
-        #array
+#array
             $array = [
                 ["No" => 1,"Nama" => "Ridho", "Mata Kuliah diambil" => 
                 ["Pemrograman I","Praktikum Pemrograman I","Pengantar Lingkungan Lahan Basah","Arsitektur Komputer"],
-                "SKS" => [2,1,2,3]
-                ],
+                "SKS" => [2,1,2,3]],
                 ["No" => 2,"Nama" => "Ratna", "Mata Kuliah diambil" => 
                 ["Basis Data I","Praktikum Basis Data I","Kalkulus"],
-                "SKS" => [2,1,3]
-                ],
+                "SKS" => [2,1,3]],
                 ["No" => 3,"Nama" => "Tono", "Mata Kuliah diambil" => 
                 ["Rekayasa Perangkat Lunak","Analisis dan Perancangan Sistem","Komputasi Awan","Kecerdasan Bisnis"],
-                "SKS" => [3,3,3,3]
-                ]
+                "SKS" => [3,3,3,3]]
             ];
-            #deklarasi var penampung
+#deklarasi var penampung
             $tmp = [];
             $tmp2 = [];
-            $count = 0;
-            #fungsi
+#fungsi
             function keterangan($array,$counter,&$tmp){
                 $counter1 = 0;
                 $tmpMath = 0;
@@ -68,10 +64,8 @@
                 $array[$key][$key2] = $value;
                 return $array;
             }
-            function count_array($array,&$count,$counter) {
-                $count = $count + count($array[$counter]['Mata Kuliah diambil']);
-            }
-            #proses pendukung
+#end fungsi
+#proses pendukung
             $counter3 = 0;
             while ($counter3 < 3) {
                 keterangan($array,$counter3,$tmp);
@@ -80,130 +74,46 @@
                 }
                 $counter3++;
             }            
-            $counter3 = 0;            
-            while ($counter3 < 3) {
-                count_array($array,$count,$counter3);
-                $counter3++;
-            }
-            #Penampilan
+#end proses pendukung
+#Penampilan
             echo "<table>";
-            echo "<tr class='header'>";
-            echo "<td>No</td>";
-            echo "<td>Nama</td>";
-            echo "<td>Mata Kuliah diambil</td>";
-            echo "<td>SKS</td>";
-            echo "<td>Total SKS</td>";
-            echo "<td>Keterangan</td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td>".$array[0]['No']."</td>";
-            echo "<td>".$array[0]['Nama']."</td>";
-            echo "<td>".$array[0]['Mata Kuliah diambil'][0]."</td>";
-            echo "<td>".$array[0]['SKS'][0]."</td>";
-            echo "<td>".$array[0]['Total SKS']."</td>";
-            echo "<td class = '";
-            if ($array[0]['Keterangan'] == "Tidak Revisi") {
-                echo "TRevisi";
+            echo "<tr class='header'><td>No</td><td>Nama</td><td>Mata Kuliah diambil</td><td>SKS</td><td>Total SKS</td><td>Keterangan</td></tr>";            $counter1 = 0;
+            while ($counter1 < 3) {
+                $counter2 = 0;
+                foreach ($array[$counter1] as $value) {
+                    echo "<tr>";
+                    if ($counter2 == 0) {
+                        echo "<td>".$array[$counter1]['No']."</td>";
+                        echo "<td>".$array[$counter1]['Nama']."</td>";
+                        echo "<td>".$array[$counter1]['Mata Kuliah diambil'][$counter2]."</td>";
+                        echo "<td>".$array[$counter1]['SKS'][$counter2]."</td>";
+                        echo "<td>".$array[$counter1]['Total SKS']."</td>";
+                        echo "<td class = '";
+                        if ($array[$counter1]['Keterangan'] == "Tidak Revisi") {
+                            echo "TRevisi";
+                        }
+                        elseif ($array[$counter1]['Keterangan'] == "Revisi KRS") {
+                            echo "Revisi";
+                        }
+                        echo "'>".$array[$counter1]['Keterangan']."</td>";            
+                    }
+                    else {
+                        if (isset($array[$counter1]['Mata Kuliah diambil'][$counter2])) {
+                            echo "<td></td>";
+                            echo "<td></td>";
+                            echo "<td>".$array[$counter1]['Mata Kuliah diambil'][$counter2]."</td>";
+                            echo "<td>".$array[$counter1]['SKS'][$counter2]."</td>";
+                            echo "<td></td>";
+                            echo "<td></td>";
+                        }
+                    }
+                    echo "</tr>";
+                    $counter2++;
+                }
+                $counter1++;
             }
-            elseif ($array[0]['Keterangan'] == "Revisi KRS") {
-                echo "Revisi";
-            }
-            echo "'>".$array[0]['Keterangan']."</td>";            
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "<td>".$array[0]['Mata Kuliah diambil'][1]."</td>";
-            echo "<td>".$array[0]['SKS'][1]."</td>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "<td>".$array[0]['Mata Kuliah diambil'][2]."</td>";
-            echo "<td>".$array[0]['SKS'][2]."</td>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "<td>".$array[0]['Mata Kuliah diambil'][3]."</td>";
-            echo "<td>".$array[0]['SKS'][3]."</td>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td>".$array[1]['No']."</td>";
-            echo "<td>".$array[1]['Nama']."</td>";
-            echo "<td>".$array[1]['Mata Kuliah diambil'][0]."</td>";
-            echo "<td>".$array[1]['SKS'][0]."</td>";
-            echo "<td>".$array[1]['Total SKS']."</td>";
-            echo "<td class = '";
-            if ($array[1]['Keterangan'] == "Tidak Revisi") {
-                echo "TRevisi";
-            }
-            elseif ($array[1]['Keterangan'] == "Revisi KRS") {
-                echo "Revisi";
-            }
-            echo "'>".$array[1]['Keterangan']."</td>";            echo "</tr>";
-            echo "<tr>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "<td>".$array[1]['Mata Kuliah diambil'][1]."</td>";
-            echo "<td>".$array[1]['SKS'][1]."</td>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "<td>".$array[1]['Mata Kuliah diambil'][2]."</td>";
-            echo "<td>".$array[1]['SKS'][2]."</td>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td>".$array[2]['No']."</td>";
-            echo "<td>".$array[2]['Nama']."</td>";
-            echo "<td>".$array[2]['Mata Kuliah diambil'][0]."</td>";
-            echo "<td>".$array[2]['SKS'][0]."</td>";
-            echo "<td>".$array[2]['Total SKS']."</td>";
-            echo "<td class = '";
-            if ($array[2]['Keterangan'] == "Tidak Revisi") {
-                echo "TRevisi";
-            }
-            elseif ($array[2]['Keterangan'] == "Revisi KRS") {
-                echo "Revisi";
-            }
-            echo "'>".$array[2]['Keterangan']."</td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "<td>".$array[2]['Mata Kuliah diambil'][1]."</td>";
-            echo "<td>".$array[2]['SKS'][1]."</td>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "<td>".$array[2]['Mata Kuliah diambil'][2]."</td>";
-            echo "<td>".$array[2]['SKS'][2]."</td>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "</tr>";
-            echo "<tr>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "<td>".$array[2]['Mata Kuliah diambil'][3]."</td>";
-            echo "<td>".$array[2]['SKS'][3]."</td>";
-            echo "<td></td>";
-            echo "<td></td>";
-            echo "</tr>";
             echo "</table>";
+#end Penampilan
         ?>
     </body>
 </html>
