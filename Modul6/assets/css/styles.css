@@ -1,0 +1,60 @@
+.icon-lg {
+  font-size: 143px;
+  margin-top: 30px;
+}
+
+.icon-email {
+  font-size: 20px;
+  padding: 15px;
+  margin-left: 15px;
+}
+
+.judul-login {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  min-width: auto;
+  padding: 3px;
+  max-width: 600px;
+  margin-top: 15px;
+}
+
+.container-login {
+  margin-top: 15px;
+  background: var(--bs-blue);
+  border-radius: 22px;
+}
+
+.container-login-submit {
+  margin: auto;
+  background: rgba(102,16,242,0.75);
+  border-radius: 22px;
+  text-align: center;
+  width: 400px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.column-login {
+  background: rgba(235,235,235,0.21);
+  border-radius: 5px;
+  width: 600px;
+  max-width: 600px;
+}
+
+.input-text {
+  background: rgba(0,0,0,0);
+  border-style: none;
+  max-width: 500px;
+  color: rgb(255,255,255);
+  font-size: 20px;
+  min-width: 250px;
+  width: 80%;
+}
+
+.input-text:focus {
+  color: #ffffff;
+  background: rgba(0,0,0,0);
+}

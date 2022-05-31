@@ -27,7 +27,7 @@
                         $star--;
                     }
                     $counter = 0;
-                    
+        
                     echo "<form method='POST'><input type='hidden' name='bintang' value='$star'>";                    
                     echo "Jumlah bintang $star";
                     echo "<br><table><tr><td>";
@@ -47,4 +47,3 @@
         </div>
     </body>
 </html>
-

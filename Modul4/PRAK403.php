@@ -23,6 +23,7 @@
         </style>
     </head>
     <body>
+        
         <?php 
 #array
             $array = [
@@ -38,7 +39,6 @@
             ];
 #deklarasi var penampung
             $tmp = [];
-            $tmp2 = [];
 #fungsi
             function keterangan($array,$counter,&$tmp){
                 $counter1 = 0;
