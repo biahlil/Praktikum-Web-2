@@ -3,8 +3,8 @@ require ("Koneksi.php");
 require ("Model.php");
 ?>
 <?php 
-    include ("header.php");
+    // include ("header.php");
     include ("Member.php");
-    include ("footer.php"); 
+    // include ("footer.php"); 
 ?>
     
